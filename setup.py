@@ -50,10 +50,10 @@ requirements = [
 
 setup(
     name="edimageprocessing",
-    version="0.0.1",
+    version="0.0.2",
     author="Eduardo Santos",
     author_email="eduardocorral296@gmail.com",
-    description="Data Analyst / Software Developer",
+    description="Pypi Publishing Test With a Image Processing Image Process Pakage",
     long_description=page_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Edu2566/ED-image-Processing-Package",
