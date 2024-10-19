@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: edimageprocessing
+Version: 0.0.1
+Summary: Data Analyst / Software Developer
+Home-page: https://github.com/Edu2566/ED-image-Processing-Package
+Author: Eduardo Santos
+Author-email: eduardocorral296@gmail.com
+Requires-Python: >=3.12.2
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi==2024.8.30
+Requires-Dist: charset-normalizer==3.4.0
+Requires-Dist: contourpy==1.3.0
+Requires-Dist: cycler==0.12.1
+Requires-Dist: docutils==0.21.2
+Requires-Dist: fonttools==4.54.1
+Requires-Dist: idna==3.10
+Requires-Dist: imageio==2.36.0
+Requires-Dist: importlib_metadata==8.5.0
+Requires-Dist: jaraco.classes==3.4.0
+Requires-Dist: jaraco.context==6.0.1
+Requires-Dist: jaraco.functools==4.1.0
+Requires-Dist: keyring==25.4.1
+Requires-Dist: kiwisolver==1.4.7
+Requires-Dist: lazy_loader==0.4
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: matplotlib==3.9.2
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: more-itertools==10.5.0
+Requires-Dist: networkx==3.4.1
+Requires-Dist: nh3==0.2.18
+Requires-Dist: numpy==2.1.2
+Requires-Dist: packaging==24.1
+Requires-Dist: pillow==11.0.0
+Requires-Dist: pkginfo==1.10.0
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: pyparsing==3.2.0
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pywin32-ctypes==0.2.3
+Requires-Dist: readme_renderer==44.0
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==13.9.2
+Requires-Dist: scikit-image==0.24.0
+Requires-Dist: scipy==1.14.1
+Requires-Dist: setuptools==75.2.0
+Requires-Dist: six==1.16.0
+Requires-Dist: tifffile==2024.9.20
+Requires-Dist: twine==5.1.1
+Requires-Dist: urllib3==2.2.3
+Requires-Dist: zipp==3.20.2
+
+# Projeto: Pacote de Processamento de Imagens
+O objetivo do projeto alÃ©m de empacotar com packages e modulos Ã© realizar a combinaÃ§Ã£o e compartaÃ§Ã£o de imagens.
+
+#### Tecnologia: Python 3.12.2
+#### Data: 19/10/2024
+-----------------------------------------
+### DescriÃ§Ã£o
+O pacote "EDimageProcessing" Ã© usado para:
+
+- MÃ³dulo "Processing":
+  - CorrespondÃªncia de histograma;
+  - Similaridade estrutural;
+  - Redimensionar imagem;
+
+- MÃ³dulo "Utils":
+  - Ler imagem;
+  - Salvar imagem;
+  - Plotar imagem;
+  - Resultado do grÃ¡fico;
+  - Plotar histograma;
+---------------------------------------------
+## Passo a passo da configuraÃ§Ã£o para hospedar um pacote em Python no ambiente de testes Test Pypi
+
+- [x] InstalaÃ§Ã£o das Ãºltimas versÃµes de "setuptools" e "wheel"
+
+```
+py -m pip install --user --upgrade setuptools wheel
+```
+- [x] Tenha certeza que o diretÃ³rio no terminal seja o mesmo do arquivo "setup.py"
+
+```
+image-processing-package py setup.py sdist bdist_wheel
+```
+
+- [x] ApÃ³s completar a instalaÃ§Ã£o, verifique se as pastas abaixo foram adicionadas ao projeto:
+  - [x] build;
+  - [x] dist;
+  - [x] edimageprocessing.egg-info.
+
+- [x] Basta subir os arquivos, usando o Twine, para o Test Pypi:
+
+```
+py -m twine upload --repository testpypi dist/*
+```
+
+- [x] ApÃ³s rodar o comando acima no terminal, serÃ¡ pedido para inserir o usuÃ¡rio e senha. Feito isso, o projeto estarÃ¡ hospedado no Test Pypi.
+
+### Este projeto Ã© inpirado no de https://www.linkedin.com/in/karinakato/, que estou usando para testar o Test Pypi, esse cÃ³digo foi passado como aula na plataforma DIO.me sendo necessÃ¡rio seu envio para concluir um curso. Este arquivo .md foi inspirado no do https://github.com/andremrezende/python-packages/blob/main/README.md?plain=1 .
+
+### No entanto, tenha em mente que o Test Pypi, como o prÃ³prio nome diz, Ã© apenas um ambiente de testes. Para que o projeto esteja disponÃ­vel como um pacote para ser usado publicamente, Ã© necessÃ¡rio hospedÃ¡-lo no site oficial do Pypi.
+----------------------------------------------------
+## InstalaÃ§Ã£o local, apÃ³s hospedagem no Test Pypi
+
+- [x] InstalaÃ§Ã£o de dependÃªncias
+```
+pip install -r requirements.txt
+```
+
+- [x] InstalÃ§Ã£o do Pacote
+
+Use o gerenciador de pacotes ```pip install -i https://test.pypi.org/simple/ edimageprocessing ```para instalar EDimageProcessing
+
+```bash
+pip install edimageprocessing
+```
+-------------------------------------------------
+## Como usar em qualquer projeto
+
+```python
+from edimageprocessing.processing import combination
+combination.find_difference(image1, image2)
+```
+
+## Autor (Quem hospedou o projeto no Test Pypi)
+Eduardo Santos
+
+https://choosealicense.com/licenses/mit/
